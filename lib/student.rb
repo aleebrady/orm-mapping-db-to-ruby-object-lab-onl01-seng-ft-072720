@@ -79,7 +79,7 @@ class Student
     
     def self.first_X_students_in_grade_10(x)
       sql = <<-SQL
-    Select * From students Where grade < 12
+    Select * From students Where grade = 10
     SQL
     DB[:conn].execute(sql, x).collect do |row|
       self.new_from_db(row)
