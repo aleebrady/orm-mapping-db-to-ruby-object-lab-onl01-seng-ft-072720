@@ -57,7 +57,12 @@ class Student
     DB[:conn].execute(sql)
   end
   
-  def self.
+  def self.all_students_in_grade_9
+    sql <<-SQL
+    Select * From students Where grade = 9
+    SQL
+    
+  end
   
   
 end
