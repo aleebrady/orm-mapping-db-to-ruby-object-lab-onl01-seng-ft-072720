@@ -75,10 +75,12 @@ class Student
     DB[:conn].execute(sql).collect do |row|
       self.new_from_db(row)
     end
-    
-    def self
-    
   end
+    
+    def self.first_X_students_in_grade_10()
+      
+    end
+      
   
   
 end
