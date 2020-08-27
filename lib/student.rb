@@ -10,7 +10,7 @@ class Student
   end
 
   def self.all
-    sql <<-SQL
+    sql = <<-SQL
     Select * From students
     SQL
     DB[:conn].execute(sql).collect do |s|
@@ -58,7 +58,7 @@ class Student
   end
   
   def self.all_students_in_grade_9
-    sql <<-SQL
+    sql = <<-SQL
     Select * 
     From students 
     Where grade = 9
