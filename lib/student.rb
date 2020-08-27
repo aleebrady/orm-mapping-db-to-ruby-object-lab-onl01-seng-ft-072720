@@ -77,7 +77,7 @@ class Student
     end
   end
     
-    def self.first_X_students_in_grade_10()
+    def self.first_X_students_in_grade_10(num)
       sql = <<-SQL
     Select * From students Where grade < 12
     SQL
